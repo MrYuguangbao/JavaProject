@@ -4,6 +4,7 @@ public class FileReadUtil {
     private String name;
 
     public static void main(String[] args) throws Exception{
+        long start = System.currentTimeMillis();
         File file = new File("E:\\document\\jquery-3.3.1.js");
         BufferedReader reader = new BufferedReader(new FileReader(file));
         StringBuffer buffer = new StringBuffer();
@@ -12,7 +13,8 @@ public class FileReadUtil {
             buffer.append(string);
         }
         System.out.println("result:\n"+buffer.toString());
-        System.out.println("读取文件！");
+        long end = System.currentTimeMillis();
+        System.out.println("读取文件！,耗时："+(end-start)+" ms");
     }
 
 }
