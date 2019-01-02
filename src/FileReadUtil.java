@@ -1,10 +1,17 @@
-import java.io.File;
+import java.io.*;
 
 public class FileReadUtil {
     private String name;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         File file = new File("E:\\document\\jquery-3.3.1.js");
+        BufferedReader reader = new BufferedReader(new FileReader(file));
+        StringBuffer buffer = new StringBuffer();
+        String string;
+        while ((string=reader.readLine()) != null){
+            buffer.append(string);
+        }
+        System.out.println("result:\n"+buffer.toString());
     }
 
 }
