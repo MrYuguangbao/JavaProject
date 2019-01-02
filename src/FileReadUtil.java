@@ -2,6 +2,7 @@ import java.io.*;
 
 public class FileReadUtil {
     private String name;
+    private String createTime;
 
     public static void main(String[] args) throws Exception{
         long start = System.currentTimeMillis();
