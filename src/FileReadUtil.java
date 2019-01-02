@@ -14,7 +14,7 @@ public class FileReadUtil {
         }
         System.out.println("result:\n"+buffer.toString());
         long end = System.currentTimeMillis();
-        System.out.println("读取文件！,耗时："+(end-start)+" ms");
+        System.out.println("读取文件完毕！,耗时："+(end-start)+" ms");
     }
 
 }
